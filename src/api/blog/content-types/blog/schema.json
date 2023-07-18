@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "topics": {
+      "type": "enumeration",
+      "enum": [
+        "User Experience",
+        "Data",
+        "Front End Dev",
+        "Infrastructure",
+        "Artificial intelligence",
+        "Mobile",
+        "Security",
+        "Culture"
+      ]
+    },
+    "preview_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "header": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "posts"
+    }
+  }
+}
