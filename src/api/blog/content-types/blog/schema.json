@@ -15,19 +15,6 @@
     "title": {
       "type": "string"
     },
-    "topics": {
-      "type": "enumeration",
-      "enum": [
-        "User Experience",
-        "Data",
-        "Front End Dev",
-        "Infrastructure",
-        "Artificial intelligence",
-        "Mobile",
-        "Security",
-        "Culture"
-      ]
-    },
     "preview_image": {
       "type": "media",
       "multiple": false,
